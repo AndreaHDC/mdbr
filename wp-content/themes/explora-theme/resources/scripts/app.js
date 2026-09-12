@@ -297,29 +297,49 @@ if(buttonListbox){
   });
 
 
-  //swipers home hero
-  const homeHeroSwiper = new Swiper("#hero_home_swiper .swiper", {
-    spaceBetween: 0,
-    slidesPerView: 1,
-    threshold:15,
-    speed:1000,
-    pagination: {
-        el: ".swiper-pagination",
+  // Both homepage sliders share controls and stop for reduced-motion preferences.
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('#hero_home_swiper .swiper, #event-slider .swiper').forEach((element) => {
+    const toggle = element.querySelector('.slideshow-toggle');
+    const multipleSlides = element.querySelectorAll('.swiper-slide').length > 1;
+    const slider = new Swiper(element, {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      threshold: 15,
+      speed: reducedMotion.matches ? 0 : 700,
+      rewind: true,
+      autoplay: multipleSlides && !reducedMotion.matches ? {
+        delay: 6000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      } : false,
+      pagination: {
+        el: element.querySelector('.swiper-pagination'),
         clickable: true,
-    },
+      },
+    });
+    if (!toggle) return;
+    toggle.hidden = !multipleSlides;
+    const updateLabel = () => {
+      toggle.textContent = slider.autoplay.running ? toggle.dataset.pause : toggle.dataset.play;
+    };
+    toggle.addEventListener('click', () => {
+      slider.autoplay.running ? slider.autoplay.stop() : slider.autoplay.start();
+      updateLabel();
+    });
+    element.addEventListener('focusin', (event) => {
+      if (event.target !== toggle) {
+        slider.autoplay.stop();
+        updateLabel();
+      }
+    });
+    reducedMotion.addEventListener('change', (event) => {
+      slider.params.speed = event.matches ? 0 : 700;
+      if (event.matches) slider.autoplay.stop();
+      updateLabel();
+    });
+    updateLabel();
   });
-
-  const eventSlider = new Swiper("#event-slider .swiper", {
-    spaceBetween: 0,
-    slidesPerView: 1,
-    threshold:15,
-    speed:1000,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-  });
-
 
   //hero page anchors
   if (document.querySelector('.hero_page')) {

@@ -7,7 +7,7 @@ if ( ! empty( $block['anchor'] ) ) {
 // Load values
 // $slides = get_field('slides');
 @endphp
-<section {{$anchor}} class="">
+<section {{$anchor}} class="events-slider">
     @if ($events)
     <h3 class="wp-block-heading has-text-align-center has-white-color has-exp-red-300-background-color has-text-color has-background" 
     style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
@@ -29,6 +29,7 @@ if ( ! empty( $block['anchor'] ) ) {
                 @endforeach
             </div>
             <div class="swiper-pagination"></div>
+            <button class="slideshow-toggle" type="button" data-pause="{{__('Pause slideshow', 'explora')}}" data-play="{{__('Play slideshow', 'explora')}}">{{__('Pause slideshow', 'explora')}}</button>
         </div>
     </div>
     @endif

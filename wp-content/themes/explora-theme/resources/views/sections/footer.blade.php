@@ -54,7 +54,7 @@
 
 {{-- //mobile footer --}}
 <div class="fixed z-40 w-full bg-white border-t left-0 bottom-0 bg-opacity-70 backdrop-blur-md lg:hidden {{ is_front_page() ? '':'pb-12' }}">
-    <a target="_blank" rel="noopener noreferrer" class="shadow-md inline-block absolute left-0 right-0 top-[-16px] m-auto w-[120px] py-2 bg-exp-yellow-300 rounded-md text-center uppercase font-bold" href="{{get_field('tickets_link','options')}}">{{__('Tickets','explora')}}</a>
+    <a target="_blank" rel="noopener noreferrer" class="shadow-md inline-block absolute left-0 right-0 top-[-16px] m-auto w-full py-2 bg-exp-yellow-300 rounded-md text-center uppercase font-bold" href="{{get_field('tickets_link','options')}}">{{__('Tickets','explora')}}</a>
     @if (is_front_page())
       <div id="hours-widget-mobile" class="pb-5 pt-9 flex items-center px-6 justify-center">
         <div class="flex items-center">
@@ -75,8 +75,9 @@
 {{-- //banner --}}
 @if (get_field('show_banner','options') && is_front_page())
 <div id="banner-advise" class="fixed z-50 bg-white inset-0 w-screen h-screen backdrop-blur-sm bg-opacity-70 flex justify-center items-center">
-  <div class="banner max-w-xl bg-white px-6 w-[90%] shadow-md rounded-md relative pt-10 pb-6">
-    <button id="banner-close" type="button" class="absolute top-3 right-3">
+  <div class="banner max-w-xl bg-white px-6 w-[90%] shadow-md rounded-md relative pt-14 pb-6">
+    <button id="banner-close" type="button" class="absolute top-3 right-3 flex items-center gap-2">
+      <span>{{__('Close', 'explora')}}</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="28.027" height="28.027" viewBox="0 0 28.027 28.027"><g transform="translate(-17633 -2038.973)"><path d="M13.013-1a14.013,14.013,0,0,1,9.909,23.922A14.013,14.013,0,0,1,3.1,3.1,13.922,13.922,0,0,1,13.013-1Zm0,25.479A11.465,11.465,0,1,0,1.548,13.013,11.478,11.478,0,0,0,13.013,24.479Z" transform="translate(17634 2039.973)"/><path d="M.274,9.192a1.274,1.274,0,0,1-.9-2.175L7.017-.627a1.274,1.274,0,0,1,1.8,1.8L1.175,8.818A1.27,1.27,0,0,1,.274,9.192Z" transform="translate(17642.918 2048.891)"/><path d="M7.918,9.192a1.27,1.27,0,0,1-.9-.373L-.627,1.175a1.274,1.274,0,0,1,1.8-1.8L8.818,7.017a1.274,1.274,0,0,1-.9,2.175Z" transform="translate(17642.918 2048.891)"/></g></svg>
     </button>
     <div class="ita">

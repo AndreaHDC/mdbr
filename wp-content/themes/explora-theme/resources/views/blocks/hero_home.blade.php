@@ -33,6 +33,7 @@ $slides = get_field('slides');
                     @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
+                <button class="slideshow-toggle" type="button" data-pause="{{__('Pause slideshow', 'explora')}}" data-play="{{__('Play slideshow', 'explora')}}">{{__('Pause slideshow', 'explora')}}</button>
             </div>
         </div>  
     @endif

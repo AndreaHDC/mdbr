@@ -55,3 +55,16 @@ ul:not([class]) {
 ol:not([class]) {
     @apply list-decimal pl-6;
 }
+// Gutenberg assigns a class to lists, so the legacy :not([class]) rule misses them.
+ul.wp-block-list { list-style: disc outside; padding-inline-start: 1.5em; }
+ol.wp-block-list { list-style: decimal outside; padding-inline-start: 1.5em; }
+.wp-block-list ul { list-style: circle outside; padding-inline-start: 1.5em; }
+.wp-block-list ol { list-style: decimal outside; padding-inline-start: 1.5em; }
+
+@media (max-width: 767px) {
+    .wp-block-button:has(a[href*="biglietteria.mdbr.it"]) {
+        width: 100%;
+        .wp-block-button__link { display: block; width: 100%; text-align: center; }
+    }
+    .info-blocks a.default-links[href*="tickets"] { width: 100%; }
+}

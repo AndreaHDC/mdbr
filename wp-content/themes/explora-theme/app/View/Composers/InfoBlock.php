@@ -33,38 +33,7 @@ class InfoBlock extends Composer
     {
         global $wp_query;
         $events = false;
-        $current_date = date('Y-m-d');
-        $args = array (
-            'ignore_sticky_posts' => 1,
-            'post_type' => 'event',
-            'post_status' => array('publish'),
-                'posts_per_page' => -1,
-                'meta_key' => 'banner_start_date', // Custom ACF field key
-                'orderby' => 'meta_value',
-                'order' => 'DESC',
-                'meta_type' => 'DATE',
-                'meta_query' => array(
-                    'relation' => 'AND',
-                    array(
-                        'key' => 'banner_start_date',
-                        'compare' => 'EXISTS', // Ensures the field exists
-                        'type' => 'DATE', // Specify the meta_value's type
-                    ),
-                    array(
-                        'key' => 'banner_start_date',
-                        'value' => $current_date,
-                        'compare' => '<=',
-                        'type' => 'DATE',
-                    ),
-
-                    array(
-                        'key' => 'banner_end_date',
-                        'value' => $current_date,
-                        'compare' => '>',
-                        'type' => 'DATE',
-                    ),
-                ),
-        );
+        $args = \App\homepage_event_query_args();
         $temp = $wp_query;
         $wp_query= null;
         $wp_query = new WP_Query($args);

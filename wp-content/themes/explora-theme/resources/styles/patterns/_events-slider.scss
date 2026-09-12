@@ -12,3 +12,15 @@
         }
     }
 }
+// Own the dimensions in the block, independently of translated Gutenberg wrappers.
+section.events-slider {
+    width: 100%;
+    margin: 2rem auto;
+    .swiper-slide > img { aspect-ratio: 1200 / 430; object-fit: cover; }
+}
+
+.wp-block-group:has(> section.events-slider) {
+    padding-inline: 0;
+    margin-block: 2rem;
+    > section.events-slider { margin-block: 0; }
+}
