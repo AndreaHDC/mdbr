@@ -45,3 +45,7 @@ Le integrazioni esterne della biglietteria restano esterne: questa copia serve a
 ## Runtime verificato
 
 Il sito web usa **PHP 8.3.33 (FPM)** e **WordPress 7.0**. La CLI generica del container può risolvere un’altra versione PHP: il deploy usa esplicitamente `php8.3 /usr/local/bin/wp`.
+
+## Verifica del ripristino
+
+Conteggi coerenti con la copia locale: 8.174 contenuti e 3.159 allegati. Verificati 33 URL tra pagine e risorse con risposta HTTP 200, homepage italiana e inglese senza immagini mancanti e accesso amministrativo autenticato. Cache Kinsta svuotata completamente dopo il ripristino.
