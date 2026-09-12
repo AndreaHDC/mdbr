@@ -58,3 +58,14 @@ function register_acf_blocks()
 		register_block_type(__DIR__ . '/Blocks/'.$block);
 	}
 }
+
+
+// The bilingual homepage notice has one switch, owned by the default language.
+// Read the original option even when a stale translated value still exists.
+add_filter('acf/load_value/name=show_banner', function ($value, $post_id) {
+    if ($post_id === 'options' || strpos((string) $post_id, 'options_') === 0) {
+        return get_option('options_show_banner', 0);
+    }
+
+    return $value;
+}, 20, 2);
