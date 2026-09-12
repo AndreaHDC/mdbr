@@ -27,7 +27,7 @@ if [[ -n "$(git status --porcelain)" ]]; then
 fi
 git fetch /www/museibambiniroma_564/private/mdbr-deploy.bundle HEAD
 git merge --ff-only FETCH_HEAD
-wp acorn view:clear
-wp cache flush
-if wp cli has-command kinsta cache purge --quiet; then wp kinsta cache purge; fi
+php8.3 /usr/local/bin/wp acorn view:clear
+php8.3 /usr/local/bin/wp cache flush
+if php8.3 /usr/local/bin/wp cli has-command kinsta cache purge --quiet; then php8.3 /usr/local/bin/wp kinsta cache purge; fi
 REMOTE

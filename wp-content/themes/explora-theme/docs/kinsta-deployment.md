@@ -41,3 +41,7 @@ Core WordPress 7.0 recuperato e verificato con checksum. Database dalla copia lo
 Il `wp-config.php` Kinsta e il suo mu-plugin sono conservati. I mu-plugin Plesk e quello esclusivamente locale non sono trasferiti. Log, backup, cache di manutenzione e dipendenze Node non vengono pubblicati.
 Ambiente WordPress impostato a `staging`, email WordPress e aggiornamenti automatici bloccati, cron disabilitato, indicizzazione disabilitata. Il mu-plugin specifico della copia di prova è `wp-content/mu-plugins/000-explora-staging.php` e resta fuori da Git.
 Le integrazioni esterne della biglietteria restano esterne: questa copia serve alla verifica del sito, non alle transazioni reali.
+
+## Runtime verificato
+
+Il sito web usa **PHP 8.3.33 (FPM)** e **WordPress 7.0**. La CLI generica del container può risolvere un’altra versione PHP: il deploy usa esplicitamente `php8.3 /usr/local/bin/wp`.
