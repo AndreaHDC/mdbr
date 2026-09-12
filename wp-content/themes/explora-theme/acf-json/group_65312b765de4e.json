@@ -1,0 +1,57 @@
+{
+    "key": "group_65312b765de4e",
+    "title": "Displays Home Block",
+    "fields": [
+        {
+            "key": "field_65312b7643c95",
+            "label": "Displays",
+            "name": "displays",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "post_type": [
+                "allestimenti"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "min": 3,
+            "max": 3,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "explora\/displayhome"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1697721311
+}

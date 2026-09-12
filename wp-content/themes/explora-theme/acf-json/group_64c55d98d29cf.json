@@ -1,0 +1,51 @@
+{
+    "key": "group_64c55d98d29cf",
+    "title": "Display fields",
+    "fields": [
+        {
+            "key": "field_64c55d98da8f7",
+            "label": "Archive Image",
+            "name": "archive_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "1200 x 430",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "return_format": "id",
+            "library": "all",
+            "min_width": 600,
+            "min_height": 630,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "allestimenti"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1690672673
+}

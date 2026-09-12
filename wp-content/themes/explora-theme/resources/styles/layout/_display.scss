@@ -1,0 +1,40 @@
+.fruition-box{
+   @apply lg:max-w-[70%];
+   -webkit-border-top-right-radius: 70px;
+    -moz-border-radius-topright: 70px;
+    border-top-right-radius: 70px;
+
+    @screen md{
+    -webkit-border-top-right-radius: 150px;
+    -moz-border-radius-topright: 150px;
+    border-top-right-radius: 150px;
+    }
+
+   h4{
+    @apply mb-3 uppercase;
+   }
+}
+
+.display-image{
+    @apply bg-exp-orange-300;
+    padding: 10% !important;
+    // @screen md{
+    //     padding: 60px !important;
+    // }
+
+    img{
+        @apply w-full h-auto;
+    }
+}
+
+.display-h2{
+    @apply pb-10 lg:pb-20 max-w-4xl mx-auto;
+    font-size: clamp(1rem, 0.7158rem + 1.2879vw, 1.875rem);
+    @apply font-normal;
+}
+
+.bottom-gallery{
+    img{
+        @apply w-full h-auto;
+    }
+}

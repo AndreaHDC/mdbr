@@ -1,0 +1,14 @@
+{
+    "name": "explora/displayarchive",
+    "title": "Displays Archive",
+    "description": "The Displays archive Section",
+    "style": [],
+    "category": "theme",
+    "icon": "archive",
+    "keywords": ["displays","archive"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "display_archive_block_render_callback"
+    },
+    "align": "full"
+}

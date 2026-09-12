@@ -1,0 +1,1 @@
+<div class="lg:columns-2"></div>

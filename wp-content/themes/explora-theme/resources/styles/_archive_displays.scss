@@ -1,0 +1,81 @@
+.displays-filter{
+    /* Hide the default checkbox */
+    .custom-checkbox input[type="checkbox"] {
+        @apply hidden;
+    }
+
+    /* Create a custom button-like appearance for the checkbox */
+    .custom-checkbox label {
+        @apply inline-block;
+        @apply whitespace-nowrap;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        @apply bg-white text-black border border-black rounded-[25px] hover:bg-exp-yellow-300 transition-colors;
+        cursor: pointer;
+    }
+
+    /* Style the label when the checkbox is checked */
+    .custom-checkbox input[type="checkbox"]:checked + label {
+        @apply bg-exp-yellow-300;
+    }
+
+    .custom-checkbox.active label{
+        @apply bg-exp-yellow-300;
+    }
+}
+
+
+.displays-filter{
+    /* Hide the default checkbox */
+    .custom-checkbox input[type="radio"] {
+        @apply hidden;
+    }
+
+    /* Create a custom button-like appearance for the checkbox */
+    .custom-checkbox label {
+        @apply inline-block;
+        @apply whitespace-nowrap;
+        padding: calc(0.667em + 2px) calc(1.333em + 2px);
+        @apply bg-white text-black border border-black rounded-[25px] hover:bg-exp-yellow-300 transition-colors;
+        cursor: pointer;
+    }
+
+    /* Style the label when the checkbox is checked */
+    .custom-checkbox input[type="radio"]:checked + label {
+        @apply bg-exp-yellow-300;
+    }
+
+    .custom-checkbox.active label{
+        @apply bg-exp-yellow-300;
+    }
+}
+
+
+
+// .pagination {
+//   @apply flex list-none border border-exp-red-300 rounded divide-x divide-exp-red-300;
+// }
+
+.pagination {
+    @apply flex justify-center divide-x text-sm;
+  }
+
+.pagination li {
+  @apply relative;
+}
+
+.pagination a {
+  @apply block py-2 px-4 text-black bg-white hover:bg-exp-red-300 hover:text-white;
+}
+
+.pagination .current {
+  @apply block py-2 px-4 text-white bg-exp-red-300 border-black;
+}
+
+.pagination .prev,
+.pagination .next {
+  @apply text-sm;
+}
+
+.pagination .disabled {
+  @apply text-exp-green-200 bg-exp-blue-300 cursor-not-allowed;
+}

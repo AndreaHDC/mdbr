@@ -1,0 +1,14 @@
+{
+    "name": "explora/formazionearchive",
+    "title": "Formazione Archive",
+    "description": "The Formazione archive Section",
+    "style": [],
+    "category": "theme",
+    "icon": "archive",
+    "keywords": ["formazione","archive"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "formazione_archive_block_render_callback"
+    },
+    "align": "full"
+}

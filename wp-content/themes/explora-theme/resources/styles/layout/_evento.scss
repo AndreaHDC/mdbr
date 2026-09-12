@@ -1,0 +1,11 @@
+.evento-image{
+    @apply bg-exp-cyan-300;
+    padding: 10% !important;
+    // @screen md{
+    //     padding: 60px !important;
+    // }
+
+    img{
+        @apply w-full h-auto;
+    }
+}

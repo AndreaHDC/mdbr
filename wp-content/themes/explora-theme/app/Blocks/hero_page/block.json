@@ -1,0 +1,14 @@
+{
+    "name": "explora/heropage",
+    "title": "Page Hero",
+    "description": "The hero section for the Pages",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["slides","home"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "hero_page_block_render_callback"
+    },
+    "align": "full"
+}

@@ -1,0 +1,17 @@
+# Track only the custom theme and this repository configuration.
+/*
+!/.gitignore
+!/wp-content/
+/wp-content/*
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/explora-theme/
+
+# Local/editor files and generated dependencies.
+.DS_Store
+.vscode/
+.idea/
+node_modules/
+*.log
+.env
+.env.*

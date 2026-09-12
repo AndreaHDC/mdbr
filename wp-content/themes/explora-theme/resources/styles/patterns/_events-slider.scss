@@ -1,0 +1,14 @@
+.events-slider{
+    @apply px-0;
+    @apply mx-auto;
+    @apply max-w-5xl #{!important};
+
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            @apply bg-black;
+        }
+        .swiper-pagination-bullet-active{
+            @apply bg-exp-red-300;
+        }
+    }
+}

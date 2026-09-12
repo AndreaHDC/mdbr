@@ -1,0 +1,72 @@
+.hero_home{
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            @apply bg-black lg:bg-white;
+        }
+        .swiper-pagination-bullet-active{
+            @apply bg-exp-yellow-300;
+        }
+    }
+    
+
+    h1, h2{
+        @apply font-normal mb-3;
+    }
+
+    h2{
+        @apply h1;
+        font-weight: 400;
+    }
+
+    h4{
+        @apply font-normal mb-3 text-exp-blue-300;
+    }
+
+    .content-wrapper{
+        -webkit-border-radius: 60px;
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius: 60px;
+        -moz-border-radius-topleft: 0;
+        border-radius: 60px;
+        border-top-left-radius: 0;
+
+        p{
+            font-size: clamp(1.125rem, 0.9385rem + 0.8453vw, 1.75rem);
+        }
+    
+        strong{
+            @apply text-exp-red-300;
+        }
+
+    }
+
+
+    .swiper-pagination{
+        @apply bottom-0 lg:bottom-[50px];
+    }
+
+    .swiper-pagination-bullet{
+        width: 13px;
+        height: 13px;
+    }
+   
+}
+
+#slider-hours{
+    p{
+        @apply font-light text-base;
+    }
+
+    ul{
+        strong{
+            @apply font-bold text-black;
+        }
+    }
+}
+
+#slider-hours-mobile{
+    p{
+        @apply font-light text-base;
+    }
+    
+}

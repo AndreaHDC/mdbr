@@ -1,0 +1,14 @@
+{
+    "name": "explora/displayhome",
+    "title": "Displays Home",
+    "description": "The Displays Home Block Section",
+    "style": [],
+    "category": "theme",
+    "icon": "archive",
+    "keywords": ["displays","homepage"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "display_home_block_render_callback"
+    },
+    "align": "full"
+}

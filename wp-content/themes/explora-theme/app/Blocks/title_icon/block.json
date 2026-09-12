@@ -1,0 +1,17 @@
+{
+    "name": "explora/titleicon",
+    "title": "Title Icon",
+    "description": "The icon for the titles",
+    "style": [],
+    "category": "formatting",
+    "icon": "tag",
+    "keywords": ["icon","title"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "title_icon_block_render_callback"
+    },
+    "supports": {
+		"jsx": true
+	}
+}
+

@@ -1,0 +1,17 @@
+.faq-wrapper{
+    @apply max-w-5xl mx-auto;
+    .wp-block-details{
+        @apply mb-2 pb-2 border-b border-b-black;
+        &:last-child{
+            @apply border-none;
+        }
+    }
+
+    summary{
+        @apply text-lg font-bold;
+    }
+
+    summary + p {
+        @apply mt-2;
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "explora/info",
+    "title": "Info Block",
+    "description": "The block for Museum Info",
+    "style": [],
+    "category": "theme",
+    "icon": "info",
+    "keywords": ["info"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "info_block_render_callback"
+    },
+    "align": "full"
+}

@@ -1,0 +1,24 @@
+<form role="search" method="get" class="search-form" action="{{ home_url('/') }}">
+  
+  <div class="w-full relative">
+  
+   <label>
+    <span class="sr-only">
+      {{ _x('Search for:', 'label', 'sage') }}
+    </span>
+
+    <input
+      class="border border-black p-3 rounded-md w-full"
+      type="search"
+      placeholder="{!! esc_attr_x('Search &hellip;', 'placeholder', 'sage') !!}"
+      value="{{ get_search_query() }}"
+      name="s"
+      required
+    >
+  </label>
+  </div>
+
+  <button type="submit" class="bg-exp-yellow-300 transition-colors px-6 py-3 text-black mt-3 rounded-e-md cursor-pointer hover:bg-exp-red-300 hover:text-white">
+    {{ _x('Search', 'submit button', 'sage') }}
+  </button>
+</form>

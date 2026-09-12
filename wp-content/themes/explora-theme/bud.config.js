@@ -1,0 +1,86 @@
+/**
+ * Compiler configuration
+ *
+ * @see {@link https://roots.io/docs/sage sage documentation}
+ * @see {@link https://bud.js.org/guides/configure bud.js configuration guide}
+ *
+ * @param {import('@roots/bud').Bud} app
+ */
+export default async (app) => {
+  /**
+   * Application assets & entrypoints
+   *
+   * @see {@link https://bud.js.org/docs/bud.entry}
+   * @see {@link https://bud.js.org/docs/bud.assets}
+   */
+  app
+    .entry('app', ['@scripts/app', '@styles/app'])
+    .entry('editor', ['@scripts/editor', '@styles/editor'])
+    .entry('editor-display', ['@styles/editor-display'])
+    .assets(['images']);
+
+  /**
+   * Set public path
+   *
+   * @see {@link https://bud.js.org/docs/bud.setPublicPath}
+   */
+  app.setPublicPath('/wp-content/themes/explora-theme/public/');
+  /**
+   * Development server settings
+   *
+   * @see {@link https://bud.js.org/docs/bud.setUrl}
+   * @see {@link https://bud.js.org/docs/bud.setProxyUrl}
+   * @see {@link https://bud.js.org/docs/bud.watch}
+   */
+  app
+    .setUrl('http://localhost:3000')
+    .setProxyUrl('https://mdbr.test')
+    .watch(['resources/views', 'app']);
+
+  /**
+   * Generate WordPress `theme.json`
+   *
+   * @note This overwrites `theme.json` on every build.
+   *
+   * @see {@link https://bud.js.org/extensions/sage/theme.json}
+   * @see {@link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json}
+   */
+  app.wpjson
+    .set('settings.color.custom', false)
+    .set('settings.color.customDuotone', false)
+    .set('settings.color.customGradient', false)
+    .set('settings.color.defaultDuotone', false)
+    .set('settings.color.defaultGradients', false)
+    .set('settings.color.defaultPalette', false)
+    .set('settings.color.duotone', [])
+    .set('settings.custom.spacing', {})
+    .set('settings.custom.typography.font-size', {})
+    .set('settings.custom.typography.line-height', {})
+    .set('settings.spacing.padding', true)
+    .set('settings.spacing.margin', true)
+    .set('settings.spacing.blockGap', false)
+    .set('settings.blocks.core/columns.spacing.blockGap', true)
+    .set('settings.blocks.core/image.border.radius', true)
+    .set('settings.blocks.core/image.border.radius', true)
+    .set('settings.spacing.units', ['px', '%', 'em', 'rem', 'vw', 'vh'])
+    .set('settings.typography.customFontSize', false)
+    .set('settings.layout.contentSize', '1440px')
+    .set('settings.layout.wideSize', '1780px')
+    .set('styles.spacing.blockGap', '0px')
+    .set('styles.blocks.core/columns.spacing.blockGap', 'var(--wp--preset--spacing--50)')
+    .set('styles.elements.button.color.background', 'var(--wp--preset--color--exp-red-300)')
+    .set('styles.elements.button.color.text', '#fff')
+    .set('styles.elements.button.border.radius', '25px')
+    .set('styles.elements.button.:hover.color.background', '#000')
+    .set('styles.elements.button.:focus.color.background', '#000')
+    .set('settings.typography.fluid', true)
+   
+
+   
+   
+
+    .useTailwindColors()
+    .useTailwindFontFamily()
+    .useTailwindFontSize()
+    .enable();
+};

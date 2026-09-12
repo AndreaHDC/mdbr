@@ -1,0 +1,36 @@
+{
+  "app": {
+    "js": [
+      "js/runtime.00900e.js",
+      "js/947.5933d6.js",
+      "js/app.675f74.js"
+    ],
+    "css": [
+      "css/app.cab4a0.css"
+    ],
+    "dependencies": []
+  },
+  "editor": {
+    "js": [
+      "js/runtime.00900e.js",
+      "js/515.f9de99.js",
+      "js/editor.bd3d8f.js"
+    ],
+    "css": [
+      "css/editor.8d82fb.css"
+    ],
+    "dependencies": [
+      "wp-data",
+      "wp-hooks"
+    ]
+  },
+  "editor-display": {
+    "js": [
+      "js/runtime.00900e.js"
+    ],
+    "css": [
+      "css/editor-display.058ba4.css"
+    ],
+    "dependencies": []
+  }
+}

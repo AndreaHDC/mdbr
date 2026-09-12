@@ -1,0 +1,14 @@
+{
+    "name": "explora/eventsslider",
+    "title": "Events Slider",
+    "description": "The events slider",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["slides","home"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "events_slider_render_callback"
+    },
+    "align": "full"
+}

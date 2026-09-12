@@ -1,0 +1,14 @@
+{
+    "name": "explora/newsarchive",
+    "title": "News Archive",
+    "description": "The News archive Section",
+    "style": [],
+    "category": "theme",
+    "icon": "archive",
+    "keywords": ["posts","archive"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "news_archive_block_render_callback"
+    },
+    "align": "full"
+}

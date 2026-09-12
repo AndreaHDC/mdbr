@@ -1,0 +1,14 @@
+{
+    "name": "explora/progettiarchive",
+    "title": "Progetti Archive",
+    "description": "The progetti archive Section",
+    "style": [],
+    "category": "theme",
+    "icon": "archive",
+    "keywords": ["progetti","archive"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "progetti_archive_block_render_callback"
+    },
+    "align": "full"
+}

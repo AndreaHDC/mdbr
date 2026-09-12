@@ -1,0 +1,77 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "../../node_modules/swiper/swiper-bundle";
+
+@import 'fonts';
+@import 'gutemberg';
+// @import 'header';
+// @import 'footer';
+@import 'home_hero';
+@import 'page_hero';
+@import 'patterns/events-slider';
+@import 'patterns/rows';
+@import 'patterns/hero-colors';
+@import 'archive_displays';
+@import 'layout/display';
+@import 'patterns/faq';
+@import 'patterns/rounded-box';
+@import 'layout/proposta';
+@import 'layout/progetto';
+@import 'patterns/staff';
+@import 'layout/formazione';
+@import 'layout/evento';
+
+body{
+    @apply font-explora-font font-light;
+}
+
+
+.is-layout-constrained{
+    @apply px-6;
+}
+
+.container{
+    @apply max-w-[1440px]
+}
+
+
+.alignwide{
+    @apply px-6;
+    transform: translate(0,0) !important;
+    left: 0 !important;
+}
+
+.alignfull{
+    transform: translate(0,0) !important;
+    left: 0 !important;
+    max-width: 100% !important;
+}
+
+.size-full{
+    img{
+        @apply w-full h-auto;
+    }
+}
+
+#google-map{
+    @apply relative min-h-[300px] lg:min-h-[600px];
+
+    iframe{
+        @apply absolute inset-0 w-full h-full;
+    }
+}
+
+.title_icon{
+    svg{
+        @apply max-w-[30px] lg:max-w-none h-auto;
+    }
+}
+
+ul.block-editor-block-list__block{
+    @apply list-disc pl-6;
+}
+
+ol.block-editor-block-list__block{
+    @apply list-decimal pl-6;
+}

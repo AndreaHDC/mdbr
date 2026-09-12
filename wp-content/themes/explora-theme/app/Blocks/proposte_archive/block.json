@@ -1,0 +1,14 @@
+{
+    "name": "explora/propostearchive",
+    "title": "Proposte Archive",
+    "description": "The Proposte archive Section",
+    "style": [],
+    "category": "theme",
+    "icon": "archive",
+    "keywords": ["proposte","archive","scuole"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "proposte_archive_block_render_callback"
+    },
+    "align": "full"
+}

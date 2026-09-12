@@ -1,0 +1,15 @@
+.hero-colors{
+    h1{
+        @apply mb-3;
+    }
+    h2{
+        font-size: clamp(1rem, 0.7158rem + 1.2879vw, 1.875rem);
+        @apply font-normal;
+    }
+
+    // font-size: 16px;
+}
+
+#hours-widget{
+    @apply w-full bg-white text-black border-b border-b-black px-6 py-3  lg:py-6 z-10 top-0 left-0 text-xs;
+}

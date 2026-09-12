@@ -1,0 +1,14 @@
+{
+    "name": "explora/herohome",
+    "title": "Home Hero",
+    "description": "The hero section for the HomePage",
+    "style": [],
+    "category": "theme",
+    "icon": "slides",
+    "keywords": ["slides","home"],
+    "acf": {
+        "mode": "preview",
+        "renderCallback": "hero_home_block_render_callback"
+    },
+    "align": "full"
+}

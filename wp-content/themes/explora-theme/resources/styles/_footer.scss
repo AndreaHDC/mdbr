@@ -1,0 +1,77 @@
+
+.footer-nav {
+
+  .menu-item-type-post_type {
+    @apply pb-3.5;
+
+    a {
+      @apply text-exp-blue-300 text-lg uppercase font-bold;
+    }
+  }
+
+  .menu-item-type-custom {
+    @apply transition ease-out duration-500 pb-3.5;
+
+    a {
+      @apply text-sm uppercase font-normal text-black;
+    }
+
+    &:first-of-type {
+      @apply pt-3.5;
+    }
+
+    &:last-of-type
+    {
+      @apply pt-0;
+    }
+  }
+}
+
+.transitions {
+  @apply transition duration-500 ease-out;
+}
+
+.row-item-title {
+  @apply font-bold text-left gap-y-3;
+}
+
+.footer-row-section-title {
+  @apply text-left text-xl font-bold mb-6;
+}
+
+.subscription-form-input {
+  @apply border-b border-black my-3 placeholder:text-center placeholder:text-xs;
+}
+
+.checkbox {
+  @apply border-2 rounded-none;
+}
+
+.social-links {
+  svg {
+    max-width: 35px;
+    height: auto;
+  }
+}
+
+.footer-top {
+  svg {
+    @apply mx-auto mb-[5rem]
+  }
+}
+
+.social-nav{
+  li{
+    a{
+      @apply font-explora-font font-normal text-lg transition-colors hover:text-exp-red-300;
+    }
+  }
+}
+
+ul.menu-footer-bottom{
+    li{
+      &:last-child{
+        @apply hidden;
+      }
+    }
+  }
