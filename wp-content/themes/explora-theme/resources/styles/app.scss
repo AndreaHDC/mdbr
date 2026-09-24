@@ -75,3 +75,21 @@ body{
 }
 
 
+
+// Keep the homepage mission readable when Gutenberg columns stack on mobile.
+@media (max-width: 781px) {
+    .home .wp-block-columns:has(ol.big-numbers) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .home ol.big-numbers {
+        // Override the spacing saved inline by the block editor.
+        padding: 0 !important;
+
+        > li {
+            padding-left: 0;
+            padding-top: 62px;
+        }
+    }
+}

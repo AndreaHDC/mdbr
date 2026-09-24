@@ -22,3 +22,13 @@ Verificati a 390×844 e 1440×1000: assenza di overflow mobile, pulsante fisso l
 Ordinamento verificato con tre eventi temporanei per lingua, creati fuori ordine e con promozioni in scadenza nel giorno del test. Risultato crescente corretto in italiano e inglese; tutti i sei eventi temporanei rimossi dopo il test. Popup ripristinato disattivato.
 
 Il backup di luglio può non contenere eventi promossi alla data corrente: in questo caso lo slider eventi resta correttamente assente.
+
+## Riga collegamenti secondari — 24 settembre 2026
+
+La riga Area stampa, FAQ e voci collegate si trova dopo le colonne principali del menu e prima della ricerca. Su mobile segue News. Lo stesso ordine è applicato in italiano e inglese direttamente nel markup, anche per navigazione da tastiera e lettori di schermo.
+
+## Missione su mobile — 24 settembre 2026
+
+Sotto 782px, rimossi i rientri laterali aggiuntivi delle colonne della missione e il padding della lista, incluso quello salvato inline nel blocco. Il numero verde precede ogni paragrafo, lasciando tutta la larghezza al testo. Regola limitata alla lista `big-numbers` della homepage, valida in entrambe le lingue; layout desktop conservato.
+
+Build completata. Verificati viewport 320, 390 e 430px senza overflow: testo largo rispettivamente 272, 342 e 382px. Controllati anche inglese a 390px e desktop a 1440px. Modifiche mantenute solo in locale.

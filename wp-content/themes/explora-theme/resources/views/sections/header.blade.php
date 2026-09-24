@@ -47,9 +47,6 @@
 
     
         <div class="content container px-6 mx-auto pt-10">
-            <div class="top-nav mb-6 border-b border-b-black">
-                {!! wp_nav_menu(['theme_location' => 'drawer_navigation_top', 'menu_class' => 'drawer_navigation_top', 'echo' => false]) !!}
-            </div>
             {!!
                 wp_nav_menu(array(
                     'theme_location' => 'drawer_navigation', 
@@ -57,6 +54,10 @@
                     'walker' => new \App\ExploraNavWalker(),
                 ));
             !!}
+
+            <div class="top-nav mt-6 border-b border-b-black">
+                {!! wp_nav_menu(['theme_location' => 'drawer_navigation_top', 'menu_class' => 'drawer_navigation_top', 'echo' => false]) !!}
+            </div>
 
             <div class="mt-6">
                 {!! get_search_form(false) !!}
